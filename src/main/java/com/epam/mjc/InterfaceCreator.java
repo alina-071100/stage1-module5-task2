@@ -1,8 +1,10 @@
 package com.epam.mjc;
 
+import java.util.stream.Collectors;
+
 public class InterfaceCreator {
 
     public Operation<Integer> divideBy(Integer divider) {
-        throw new UnsupportedOperationException("You should implement this method.");
+        return a -> a.stream().map((b) -> b / divider).collect(Collectors.toList());
     }
 }
